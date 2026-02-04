@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Parallax sections */
+  .parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* First image */
+  .parallax-1 {
+    background-image: url("https://beaches-searcher.com/images/beaches/764201607/TH201607.jpg");
+  }
+  
+  /* Second image */
+  .parallax-2 {
+    background-image: url("https://www.shutterstock.com/image-photo/clear-image-beautiful-view-bangsaen-600nw-2410945955.jpg");
+  }
+  
+  /* Centered text */
+  .center-text {
+    color: white;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 8px;
+  }
+  
+  /* Black block section */
+  .content {
+    height: 50vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  
