@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .calculator {
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    input, select {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="calculator" onsubmit="calculate(event)">
+    <input type="text" id="left" />
+    
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right" />
+
+    <input type="submit" value="Try me!" />
+  </form>
+
+  <script>
+    function calculate(event) {
+      event.preventDefault();
+
+      const left = document.getElementById("left").value;
+      const right = document.getElementById("right").value;
+      const op = document.getElementById("operator").value;
+
+      // Check positive integers
+      if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+        alert("Error :(");
+        return;
+      }
+
+      const a = parseInt(left, 10);
+      const b = parseInt(right, 10);
+
+      // Division or modulo by zero
+      if ((op === "/" || op === "%") && b === 0) {
+        alert("It’s over 9000!");
+        console.log("It’s over 9000!");
+        return;
+      }
+
+      let result;
+      switch (op) {
+        case "+": result = a + b; break;
+        case "-": result = a - b; break;
+        case "*": result = a * b; break;
+        case "/": result = a / b; break;
+        case "%": result = a % b; break;
+      }
+
+      alert(result);
+      console.log(result);
+    }
+
+    function isPositiveInteger(value) {
+      return /^\d+$/.test(value);
+    }
+
+    // Every 30 seconds reminder
+    setInterval(() => {
+      alert("Please, use me.");
+    }, 30000);
+  </script>
+
+</body>
+</html>
