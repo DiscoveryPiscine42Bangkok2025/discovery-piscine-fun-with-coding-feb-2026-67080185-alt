@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolios</title>
+
+    <style>
+        .stlye {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 70px;
+            background: #ffffff;
+            margin: 0;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background: #212529;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0d6efd;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 100px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== PROFILE ===== */
+        #profile {
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        #profile h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        #profile h3 {
+            color: #0d6efd;
+            margin-top: 10px;
+        }
+
+        #profile p {
+            max-width: 600px;
+            margin: 20px auto 0;
+            color: #555;
+        }
+
+        /* ===== EXPERIENCE & SKILLS ===== */
+        .two-column {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h5 {
+            margin-bottom: 5px;
+        }
+
+        .muted {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        /* ===== SKILLS ===== */
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .progress {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #0d6efd;
+        }
+
+        .green { background: #198754; }
+        .blue { background: #0dcaf0; }
+
+        /* ===== CONTACT ===== */
+        #contact {
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .contact-card {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-card p {
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #0d6efd;
+            color: #0d6efd;
+            transition: 0.3s;
+        }
+
+        .btn.dark {
+            border-color: #212529;
+            color: #212529;
+        }
+
+        .btn:hover {
+            background: #0d6efd;
+            color: white;
+        }
+
+        .btn.dark:hover {
+            background: #212529;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav>
+        <div class="nav-container">
+            <a href="./homepage.html">Back</a>
+            <div>
+                <a href="./homepage.html">Home</a>
+                <a href="#profile">About Me</a>
+                <a href="#experience">Skills & Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PROFILE ===== -->
+    <section id="profile">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Profile" class="profile-img">
+            <h1>Kanticha Srimongkol</h1>
+            <h3>Junior Web Developer</h3>
+            <p>
+                Passionate about building clean, functional, and user-friendly websites.
+                Currently refining my skills in responsive design and modern CSS.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE & SKILLS ===== -->
+    <section id="experience">
+        <div class="container two-column">
+
+            <div class="column">
+                <h2 style="color:#0d6efd; margin-bottom:20px;">Experience</h2>
+
+                <div class="card">
+                    <h5>Freelance Web Designer</h5>
+                    <div class="muted">2023 – Present</div>
+                    <p>Creating custom layouts and landing pages for small businesses.</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <h2 style="color:#0d6efd; margin-bottom:20px;">Skills</h2>
+
+                <div class="skill">
+                    <label>HTML5 & CSS3</label>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <label>Responsive Design</label>
+                    <div class="progress">
+                        <div class="progress-bar green" style="width:85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <label>JavaScript</label>
+                    <div class="progress">
+                        <div class="progress-bar blue" style="width:70%"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="container">
+            <h2 style="font-size:2.5rem; margin-bottom:40px;">Let's Connect</h2>
+
+            <div class="contact-card">
+                <p><strong>Email:</strong> alex.dev@email.com</p>
+                <p><strong>Location:</strong> Paris, France</p>
+
+                <div class="buttons">
+                    <a href="#" class="btn">LinkedIn</a>
+                    <a href="#" class="btn dark">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

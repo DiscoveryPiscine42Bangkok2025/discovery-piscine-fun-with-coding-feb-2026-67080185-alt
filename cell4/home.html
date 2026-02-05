@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 80px;
+            background: linear-gradient(to bottom, #fff, #fdeff4);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: linear-gradient(90deg, #f683db);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .navbar a {
+            color: #fff !important;
+            font-weight: bold;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #333 !important;
+            transform: scale(1.1);
+        }
+
+        .home {
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .PROFILE {
+            font-size: 50px;
+            letter-spacing: 6px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        /* ===== IMAGE CARDS ===== */
+        .img-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profile-card {
+            position: relative;
+            width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile-card img {
+            width: 100%;
+            transition: transform 0.4s ease;
+        }
+
+        .profile-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* ===== OVERLAY INFO ===== */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            padding: 20px;
+        }
+
+        .profile-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .overlay p {
+            font-size: 14px;
+        }
+
+        .lead {
+            margin-top: 30px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand home" href="#">HOME</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="cv1.html">Resume 1 (My Melody)</a>
+                <a class="nav-link" href="cv2.html">Resume 2 (Kuromi)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="container hero-section">
+        <h1 class="PROFILE">PROFILE</h1>
+
+        <div class="img-container">
+
+            <!-- Card 1 -->
+            <div class="profile-card">
+                <a href="secondpage.html">
+                    <img src="https://preview.redd.it/is-there-a-reason-why-theres-seen-to-be-a-bit-of-discourse-v0-xot0sz4fwtld1.png?auto=webp&s=f69804e8880d4b9afd94c03ac8ed179bbcfeab3f" alt="My Melody">
+                    <div class="overlay">
+                        <h3>My Melody Resume</h3>
+                        <p>Soft aesthetic • Creative • Friendly layout</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="profile-card">
+                <a href="cv2.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_faRe2g5ZxZVzd-NgpkjdNrk2ApEw8wKmCw&s" alt="Kuromi">
+                    <div class="overlay">
+                        <h3>Kuromi Resume</h3>
+                        <p>Bold • Dark theme • Confident style</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <p class="lead">Hover on an image to see details. Click to view the resume.</p>
+    </div>
+
+</body>
+</html>
