@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolios</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-top: 80px;
+            background: linear-gradient(to bottom, #a1c4fd 0%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background: #212529;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 100;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #333;
+            transform: scale(1.1);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        /* ===== IMAGE CARDS ===== */
+        .img-container {
+            display: flex;
+            gap: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30vh;
+        }
+
+        .profile-card {
+            position: relative;
+            width: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile-card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .profile-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* ===== OVERLAY INFO ===== */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .overlay p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="navbar-brand" href="./intropage.html">Back</a>
+            <div class="nav-links">
+                <a href="#homepage">Home</a>
+                <a href="./ploypage.html">Gunchaya Narkin</a>
+                <a href="./meipage.html">Kanticha Srimongkol</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="img-container">
+
+        <!-- Ploy -->
+        <div class="profile-card">
+            <a href="./ploypage.html">
+                <img src="https://preview.redd.it/is-there-a-reason-why-theres-seen-to-be-a-bit-of-discourse-v0-xot0sz4fwtld1.png?auto=webp&s=f69804e8880d4b9afd94c03ac8ed179bbcfeab3f" alt="ploy">
+                <div class="overlay">
+                    <h3>Gunchaya Narkin</h3>
+                    <p>Bachelor of School of Food Industry</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Mei -->
+        <div class="profile-card">
+            <a href="./meipage.html">
+                <img src="meipic.png" alt="mei">
+                <div class="overlay">
+                    <h3>Kanticha Srimongkol</h3>
+                    <p>Bachelor of School of Food Industry</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
