@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .menu {
+    position: relative;
+    width: 260px;
+  }
+  
+  .menu-button {
+    background: #003a8f; /* SNCF blue */
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .dropdown {
+    display: none;
+    background: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+  .menu:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown div {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown div:last-child {
+    border-bottom: none;
+  }
+  
+  .date { background: #99d8ff; }
+  .velocity { background: #99d8ff; }
+  .wind { background: #99d8ff; }
+  .temperature { background: #99d8ff; }

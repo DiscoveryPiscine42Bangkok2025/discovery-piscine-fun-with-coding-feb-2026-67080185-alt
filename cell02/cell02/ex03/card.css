@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+  }
+  
+  .card {
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Invisible table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    border: none; /* invisible table */
+    padding: 8px 0;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  /* Profile picture */
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Text styles */
+  .login {
+    font-weight: bold;
+  }
+  
+  .description {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Social icons */
+  .social img {
+    width: 24px;
+    margin: 0 6px;
+    cursor: pointer;
+  }
+  
+  /* Contact button */
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #4a6cf7;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #3b5bdb;
+  }
+  

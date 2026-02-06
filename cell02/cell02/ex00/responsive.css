@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .full-table {
+    width: 100vw;
+    height: 100vh;
+    border-collapse: collapse;
+    table-layout: fixed; /* forces shrinking */
+  }
+  
+  .full-table td {
+    border: 1px solid #000;
+    text-align: center;
+    font-size: clamp(10px, 2vw, 24px);
+    padding: 10px;
+    overflow-wrap: break-word;
+  }
+  
+  /* Cell colors */
+  .c1 { background: #8ecae6; }
+  .c2 { background: #ffb703; }
+  .c3 { background: #fb8500; }
+  .c4 { background: #90db9a; }
+  .c5 { background: #d0bdf4; }
+
+    
