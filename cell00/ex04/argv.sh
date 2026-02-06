@@ -1,0 +1,9 @@
+# Check if no arguments were passed (count is 0)
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied"
+else
+    # Print up to 3 arguments as requested
+    if [ -n "$1" ]; then echo "$1"; fi
+    if [ -n "$2" ]; then echo "$2"; fi
+    if [ -n "$3" ]; then echo "$3"; fi
+fi
